@@ -1,14 +1,13 @@
 import 'dotenv/config'
-import express, { Application, Request, Response } from 'express'
+import express, { Application } from 'express'
+import { simpleTodoRouter } from './routes/simpleTodoRoute'
 
 const app: Application = express()
+app.use(express.json())
+
+app.use('/api/simple-todo', simpleTodoRouter)
+
 const port = process.env.PORT || 5000
-
-app.get('/', (req: Request, res: Response) => {
-    console.log(req)
-    res.send('Hello!!!!')
-})
-
 app.listen(port, () => {
     console.log(`Example app listening port ${port}`)
 })
