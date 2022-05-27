@@ -1,5 +1,9 @@
 # Changelog
 
-## [2022-05-26] Version 1.0.0
+## [2022-05-27] Version 0.0.1
+ - Start of the project
 ### Added
- - Changelo.md
+ - Add CHANGELOG.md file
+ - Add README.md file
+ - Start repo on GitHub
+ - Add data on package.json

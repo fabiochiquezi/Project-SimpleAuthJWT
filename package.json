@@ -1,8 +1,17 @@
 {
-  "name": "tool-backendboilerplate",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "project-simpleauthjwt",
+  "description": "Simple project about authentication with JWT using Node + Typescript",
+  "repository": {
+      "url": "https://github.com/fabiochiquezi/Project-SimpleAuthJWT"
+  },
+  "version": "0.0.1",
   "license": "MIT",
+  "author": {
+      "email": "fabiochiquezi@gmail.com",
+      "name": "Fábio Chiquezi",
+      "url": "https://github.com/fabiochiquezi"
+  },
+  "main": "src/app.ts",
   "scripts": {
     "start": "node dist/app.js",
     "build": "rimraf dist && tsc -p tsconfig.prod.json",

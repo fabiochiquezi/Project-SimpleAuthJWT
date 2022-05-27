@@ -21,9 +21,7 @@
         "docker-compose.yml": true,
         ".dockerignore": true,
         ".github": true,
-        "CHANGELOG.example.md": true,
         "CHANGELOG.md": true,
-        "readme.example.md": true
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
