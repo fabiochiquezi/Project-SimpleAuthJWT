@@ -19,7 +19,7 @@ _ps²: the first time you run **yarn up**, it'll take a while for Docker build t
 ##### Test
 1. **yarn test:** test your app
 2. **yarn 'test:watch':** mantain your app in stage of test
-3. **yarn 'test:watch':** get the coverage of the pile of tests
+3. **yarn 'test:coverage':** get the coverage of the pile of tests
 <br>
 
 
