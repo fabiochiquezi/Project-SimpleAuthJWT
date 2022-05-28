@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv'
 import express, { Application } from 'express'
-import { simpleTodoRouter } from './routes/simpleTodoRoute'
-import { errrorHandler } from './middleware/errorMiddleware'
+import { simpleTodoRouter } from './simpleTodo/routes'
+import { errrorHandler } from './share/middlewares/errorMiddleware'
 
 dotenv.config()
 const app: Application = express()

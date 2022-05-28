@@ -4,7 +4,7 @@ import {
     getSimpleTodo,
     postSimpleTodo,
     putSimpleTodo
-} from '../controllers/simpleTodo'
+} from '../controllers'
 
 const simpleTodoRouter = express.Router()
 
