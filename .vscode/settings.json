@@ -22,6 +22,7 @@
         ".dockerignore": true,
         ".github": true,
         "CHANGELOG.md": true,
+        "todo.md": true
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
