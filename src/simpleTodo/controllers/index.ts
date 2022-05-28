@@ -7,20 +7,18 @@ const getAllSimpleTodo = asyncHandler(async (req, res) => {
 
 // @ts-ignore
 const getSimpleTodo = asyncHandler(async (req, res) => {
-    throw new Error('test error')
-
-    // console.log(req.url)
-    // res.status(200).json({ ok: 'get' })
+    console.log(req.url)
+    res.status(200).json({ ok: 'get' })
 })
 
 const postSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
-    res.status(200).json({ ok: 'set' })
+    res.status(200).json({ ok: 'post' })
 })
 
 const putSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
-    res.status(200).json({ ok: 'update' })
+    res.status(200).json({ ok: 'put' })
 })
 
 const deleteSimpleTodo = asyncHandler(async (req, res) => {

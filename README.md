@@ -7,16 +7,19 @@ Simple project about authentication with JWT using Node + Typescript
 ## Commands
 ##### Install and Run
 1. **yarn:** install all dependencies
-2. **yarn watch:** make typescript look all modifications
-3. **yarn up:** get up the Node app, Mongo and Mongo-Express
-4. **yarn down:** destroy the containers
+2. **yarn husky install:** enable git hooks w/ husky
+3. **yarn watch:** make typescript look all modifications
+4. **yarn up:** get up the Node app, Mongo and Mongo-Express
+5. **yarn down:** destroy the containers
 
 _ps: to run the app with Docker, first run 'yarn watch' and then 'yarn up'. It was designed in this way to make Docker faster as possible_
+
+_ps²: the first time you run **yarn up**, it'll take a while for Docker build the containers_
 
 ##### Test
 1. **yarn test:** test your app
 2. **yarn 'test:watch':** mantain your app in stage of test
-3. **yarn 'test:watch':** get the coverage of the pile of tests
+3. **yarn 'test:coverage':** get the coverage of the pile of tests
 <br>
 
 
