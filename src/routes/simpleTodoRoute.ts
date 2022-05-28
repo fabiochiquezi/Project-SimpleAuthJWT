@@ -10,12 +10,12 @@ const simpleTodoRouter = express.Router()
 
 simpleTodoRouter
     .route('/')
-    .get(getSimpleTodo)
-    .post(postSimpleTodo)
+        .get(getSimpleTodo)
+        .post(postSimpleTodo)
 
 simpleTodoRouter
     .route('/:id')
-    .put(putSimpleTodo)
-    .delete(deleteSimpleTodo)
+        .put(putSimpleTodo)
+        .delete(deleteSimpleTodo)
 
 export { simpleTodoRouter }

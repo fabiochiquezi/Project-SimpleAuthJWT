@@ -32,7 +32,7 @@
         "no-useless-concat": "error",
         "no-useless-return": "error",
         "no-constant-condition": "warn",
-        "no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|__" }],
+        //"no-unused-vars": ["warn", { "argsIgnorePattern": "_" }],
 
         //* Enhance Readability
         "no-mixed-spaces-and-tabs": "warn",

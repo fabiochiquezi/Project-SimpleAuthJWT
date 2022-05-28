@@ -1,25 +1,32 @@
-import { Request, Response } from 'express'
+import asyncHandler from 'express-async-handler'
 
-const getAllSimpleTodo = (req: Request, res: Response) => {
+const getAllSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
     res.status(200).json({ ok: 'getAll' })
-}
-const getSimpleTodo = (req: Request, res: Response) => {
-    console.log(req.url)
-    res.status(200).json({ ok: 'get' })
-}
-const postSimpleTodo = (req: Request, res: Response) => {
+})
+
+// @ts-ignore
+const getSimpleTodo = asyncHandler(async (req, res) => {
+    throw new Error('test error')
+
+    // console.log(req.url)
+    // res.status(200).json({ ok: 'get' })
+})
+
+const postSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
     res.status(200).json({ ok: 'set' })
-}
-const putSimpleTodo = (req: Request, res: Response) => {
+})
+
+const putSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
     res.status(200).json({ ok: 'update' })
-}
-const deleteSimpleTodo = (req: Request, res: Response) => {
+})
+
+const deleteSimpleTodo = asyncHandler(async (req, res) => {
     console.log(req.url)
     res.status(200).json({ ok: 'delete' })
-}
+})
 
 export {
     getSimpleTodo,
