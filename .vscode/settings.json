@@ -8,6 +8,8 @@
         "tsconfig.json": true,
         "yarn.lock": true,
         ".env": true,
+        ".env.test": true,
+        ".env.prod": true,
         "dist/": true,
         ".editorconfig": true,
         ".prettierrc": true,

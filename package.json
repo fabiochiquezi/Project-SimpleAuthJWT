@@ -15,20 +15,21 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "rimraf dist && tsc -p tsconfig.prod.json",
-    "test": "jest --runInBand",
-    "test:watch": "jest --runInBand --watch",
-    "test:coverage": "jest --coverage --runInBand",
-    "dev": "ts-node-dev src/app.ts",
-    "dev2": "nodemon -L --exec ts-node src/app.ts",
+    "test": "NODE_ENV=test jest --runInBand",
+    "test:watch": "NODE_ENV=test jest --runInBand --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage --runInBand",
+    "dev": "NODE_ENV=dev ts-node-dev src/app.ts",
+    "dev2": "NODE_ENV=dev nodemon -L --exec ts-node src/app.ts",
     "down": "docker-compose down",
     "up": "yarn build && docker-compose up",
     "watch": "tsc -w",
-    "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/app.js"
+    "debug": "NODE_ENV=dev nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/app.js"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
+    "express-validator": "^6.14.1",
     "mongoose": "^6.3.4",
     "nodemon": "^2.0.16"
   },

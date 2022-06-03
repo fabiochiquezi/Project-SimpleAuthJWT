@@ -1,18 +1,9 @@
-import * as dotenv from 'dotenv'
-import express, { Application } from 'express'
+import makeApp from './share/configs/app'
 import { simpleTodoRouter } from './simpleTodo/routes'
 import { connectMongo } from './share/configs/database/mongo'
-import { errrorHandler } from './share/middlewares/errorMiddleware'
 
-dotenv.config()
-connectMongo()
-const app: Application = express()
-const port = process.env.PORT || 5000
-
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-
+const app = makeApp(connectMongo)
 app.use('/api/simple-todo', simpleTodoRouter)
-app.use(errrorHandler)
 
+const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`App listening port ${port}`))
