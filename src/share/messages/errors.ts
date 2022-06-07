@@ -1,6 +1,5 @@
-export const errFn = {
-    missData: (data: string[]) => new Error(`The field(s): '${data.toString()}' is required!`),
-    databaseErr: () => new Error('Occurred an error on database, please try again later '),
-    itemNotFound: () => new Error('Item not found')
+export const errMessages = {
+    requestDataErr: 'Data send is invalid',
+    databaseErr: 'Occurred an error on database, please try again later.',
+    itemNotFound: 'Item not found.'
 }
-

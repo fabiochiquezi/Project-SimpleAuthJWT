@@ -14,5 +14,10 @@ module.exports = {
         statements: 0
       }
     },
+    resetMocks: true,
+    clearMocks: true,
+    testMatch: [
+        '**/**/*.test.ts'
+    ],
     moduleDirectories: ['node_modules', 'src']
   }

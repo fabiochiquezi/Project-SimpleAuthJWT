@@ -1,16 +1,14 @@
-import { props } from './types'
-import * as dotenv from 'dotenv'
-import pathEnv from './pathEnv'
 import express, { Application } from 'express'
+import { simpleTodoRouter } from '../../../simpleTodo/routes'
 import { errrorHandler } from '../../middlewares/errorMiddleware'
 
-const makeApp: props = (databaseConnect) => {
-    dotenv.config({ path: pathEnv() })
+const makeApp = () => {
     const app: Application = express()
-    databaseConnect()
-
     app.use(express.json())
     app.use(express.urlencoded({ extended: false }))
+
+    app.use('/api/simple-todo', simpleTodoRouter)
+
     app.use(errrorHandler)
     return app
 }

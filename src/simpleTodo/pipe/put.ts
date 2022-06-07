@@ -1,3 +1,5 @@
+
+/*
 import { domain } from '../domain/types'
 import { validReq } from '../../helpers/validation'
 import { responseStd } from '../../helpers/response'
@@ -25,3 +27,4 @@ const put: put = Domain => asyncHandler(async (req, res) => {
 })
 
 export { put }
+*/

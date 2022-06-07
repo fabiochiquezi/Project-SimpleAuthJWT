@@ -64,5 +64,9 @@
         "object-shorthand": "off",
         "prefer-const": "error",
         "prefer-template": "warn"
+
+        //config problemss
+        //"comma-dangle": ["error", "never"]
+
     }
 }

@@ -1,22 +1,16 @@
-import { del, getAll, getByID, post, put } from './pipe'
-import { SimpleTodoDomain } from './domain'
-import { putValidation } from './valid'
+import { responseStd } from './../helpers/response/index'
+import { validReq } from '../helpers/validation/expressValid/validation'
+import { getByID } from './pipe'
 import express from 'express'
+import { SimpleTodoDomain } from './domain'
+import { validation } from './valid'
+import { postPipe } from './pipe/post'
 
 const simpleTodoRouter = express.Router()
 
-simpleTodoRouter
-    .route('/')
-        .get(getAll)
-        .post(post(SimpleTodoDomain))
+const postFn = postPipe(SimpleTodoDomain, validReq, responseStd)
+simpleTodoRouter.post('/', validation, postFn)
 
-simpleTodoRouter
-    .put('/:id', putValidation, put(SimpleTodoDomain))
-
-simpleTodoRouter
-    .route('/:id')
-        // .put(put(SimpleTodoDomain))
-        .delete(del)
-        .get(getByID)
+simpleTodoRouter.route('/:id').get(getByID)
 
 export { simpleTodoRouter }

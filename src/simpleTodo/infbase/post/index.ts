@@ -1,13 +1,11 @@
 import { props } from './types'
 
-export const postApi: props = (Domain, data) => {
+export const postApi: props = Domain => async data => {
     try {
-        const todo = new Domain(data)
-        todo.save()
-        console.log('postApi Success!')
-        return true
+        const toDo = new Domain(data)
+        await toDo.save()
+        return { post: true, message: 'Item created succesfully!', item: toDo }
     } catch (e: any) {
-        console.log(e.message)
-        return false
+        return { post: false, message: 'Ocurred an error on the database', item: null }
     }
 }

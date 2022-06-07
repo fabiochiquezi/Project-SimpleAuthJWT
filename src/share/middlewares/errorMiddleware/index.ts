@@ -1,13 +1,7 @@
-import { NextFunction, Request, Response } from 'express'
-
-type props = (
-    err: Error,
-    _req: Request,
-    res: Response,
-    _next: NextFunction
-) => void
+import { props } from './types'
 
 const errrorHandler: props = (err, _req, res, _next) => {
+    console.log(err, 'eeeeeeerrrrrrr')
     const statusCode = res.statusCode ? res.statusCode : 500
     res.status(statusCode)
     res.json({

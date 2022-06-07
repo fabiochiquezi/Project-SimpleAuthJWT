@@ -1,5 +1,3 @@
 import { body } from 'express-validator'
 
-export const putValidation = [
-    body('content').notEmpty()
-]
+export const validation = [body('content').notEmpty().isString()]
