@@ -4,10 +4,7 @@ import { successMessage } from '../../share/messages/successes'
 
 describe('Post /simpleTodo', () => {
     const url = 'http://localhost:5000/api/simple-todo'
-
-    afterAll(async () => {
-        console.log('TODO clear database')
-    })
+    let docID: string
 
     describe('given a error or mistake', () => {
         it('as miss required data¹', async () => {
@@ -65,12 +62,18 @@ describe('Post /simpleTodo', () => {
 
     describe('given a success request', () => {
         it('should: save + status 200', async () => {
-            const data = { content: 'xxx' }
+            const data = { content: 'test' }
             const resp = await reqJest(url, 'post', data)
+            docID = resp.data.data._id
 
             expect(resp.status).toBe(200)
             expect(resp.data.ok).toBe(true)
             expect(resp.data.message).toBe(successMessage.post)
+            expect(resp.data.data.content).toBe('test')
         })
+    })
+
+    afterAll(async () => {
+        await reqJest(`${url}/${docID}`, 'delete')
     })
 })

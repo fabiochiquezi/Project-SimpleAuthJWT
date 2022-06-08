@@ -12,13 +12,13 @@ const postPipe: post = (Domain, validationFn, responseFn) =>
             return
         }
 
-        const { post } = await postApi(Domain)(req.body)
+        const { post, item } = await postApi(Domain)(req.body)
         if (!post) {
-            responseFn(res, 500, false, errMessages.databaseErr, errors)
+            responseFn(res, 500, false, errMessages.database.err, errors)
             return
         }
 
-        responseFn(res, 200, true, successMessage.post)
+        responseFn(res, 200, true, successMessage.post, item)
     })
 
 export { postPipe }

@@ -28,16 +28,20 @@
             "title": "To-Do",
             "tasks": [
                 {
+                    "text": "alter messages of infbase layer, put on the messages file",
+                    "id": "cl45wzx6p000c3p5x8ydahzb7"
+                },
+                {
+                    "text": "Review all status sent in /simple-todo",
+                    "id": "cl45uecew000a3p5x0iqffea8"
+                },
+                {
                     "text": "Implement rest for /simple-todo",
                     "id": "cl45nerg4000b3p5xxze8wsjd"
                 },
                 {
                     "text": "POST /simple-todo -> test fail database",
                     "id": "cl45psykh000a3p5xbcehax8p"
-                },
-                {
-                    "text": "Clean database after tests",
-                    "id": "cl45n99ny000b3p5xbdi2466e"
                 }
             ],
             "id": "cl45n99ny000c3p5xcpm6j95w",
@@ -47,8 +51,16 @@
             "title": "Doing",
             "tasks": [
                 {
+                    "text": "DELETE /simple-todo:id",
+                    "id": "cl45uewzz000b3p5xbz1t90fl"
+                },
+                {
                     "text": "GET /simple-todo",
                     "id": "cl45s3uaw000b3p5xivpst32z"
+                },
+                {
+                    "text": "Clean database after tests",
+                    "id": "cl45n99ny000b3p5xbdi2466e"
                 }
             ],
             "id": "cl45n99ny000d3p5x9vknoik1",
@@ -63,5 +75,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654704124082
+    "timestamp": 1654715646206
 }

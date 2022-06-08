@@ -4,7 +4,7 @@ import { domain } from '../../domain/types'
 type resp = {
     get: boolean
     message: string
-    items: Document<unknown, any, domain>[] | null
+    docs: Document<unknown, any, domain>[] | null
 }
 
 export type props = (Domain: Model<domain>) => Promise<resp>

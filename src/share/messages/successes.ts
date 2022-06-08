@@ -1,4 +1,5 @@
 export const successMessage = {
-    post: 'The item was successfully inserted.',
-    get: 'The requisition was done succesfully.'
+    post: 'Document successfully inserted.',
+    get: 'The requisition was done succesfully.',
+    del: 'Document succesfully deleted.'
 }
