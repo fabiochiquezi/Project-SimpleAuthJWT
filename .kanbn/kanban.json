@@ -28,6 +28,14 @@
             "title": "To-Do",
             "tasks": [
                 {
+                    "text": "Implement rest for /simple-todo",
+                    "id": "cl45nerg4000b3p5xxze8wsjd"
+                },
+                {
+                    "text": "POST /simple-todo -> test fail database",
+                    "id": "cl45psykh000a3p5xbcehax8p"
+                },
+                {
                     "text": "Clean database after tests",
                     "id": "cl45n99ny000b3p5xbdi2466e"
                 }
@@ -39,8 +47,8 @@
             "title": "Doing",
             "tasks": [
                 {
-                    "text": "Implement rest for /simple-todo",
-                    "id": "cl45nerg4000b3p5xxze8wsjd"
+                    "text": "GET /simple-todo",
+                    "id": "cl45s3uaw000b3p5xivpst32z"
                 }
             ],
             "id": "cl45n99ny000d3p5x9vknoik1",
@@ -55,5 +63,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654696960816
+    "timestamp": 1654704124082
 }

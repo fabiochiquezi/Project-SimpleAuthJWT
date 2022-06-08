@@ -27,6 +27,7 @@
 <li>[v] Test if exist the right data but is empty</li>
 <li>[ ] Test of database problem</li>
 <li>[v] Test success process</li>
+<li>[ ] Just authenticated users can add a Simple ToDo</li>
 </ol>
 
 <br />

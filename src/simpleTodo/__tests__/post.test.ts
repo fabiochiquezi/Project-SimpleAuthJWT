@@ -9,8 +9,8 @@ describe('Post /simpleTodo', () => {
         console.log('TODO clear database')
     })
 
-    describe('given a request with wrong data', () => {
-        it('miss required data - throw error¹', async () => {
+    describe('given a error or mistake', () => {
+        it('as miss required data¹', async () => {
             try {
                 const data = {}
                 await reqJest(url, 'post', data)
@@ -23,7 +23,7 @@ describe('Post /simpleTodo', () => {
             }
         })
 
-        it('miss required data - throw error²', async () => {
+        it('as miss required data²', async () => {
             try {
                 const data = { name: 'test', conten: 'test' }
                 await reqJest(url, 'post', data)
@@ -36,7 +36,7 @@ describe('Post /simpleTodo', () => {
             }
         })
 
-        it('miss required data - throw error³', async () => {
+        it('as miss required data³', async () => {
             try {
                 const data = { content: '' }
                 await reqJest(url, 'post', data)
@@ -49,7 +49,7 @@ describe('Post /simpleTodo', () => {
             }
         })
 
-        it('wrong type date - throw error', async () => {
+        it('as wrong type date', async () => {
             try {
                 const data = { content: 222 }
                 await reqJest(url, 'post', data)
@@ -63,7 +63,7 @@ describe('Post /simpleTodo', () => {
         })
     })
 
-    describe('given a request w/ right data', () => {
+    describe('given a success request', () => {
         it('should: save + status 200', async () => {
             const data = { content: 'xxx' }
             const resp = await reqJest(url, 'post', data)

@@ -5,5 +5,5 @@ export type ResponseStd = (
     status: number,
     ok: boolean,
     message?: string,
-    data?: Record<any, any>
+    data?: any
 ) => Response

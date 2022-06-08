@@ -1,8 +1,8 @@
-import { successMessage } from './../../../share/messages/successes'
 import { post } from './types'
 import { postApi } from '../../infbase/post'
 import asyncHandler from 'express-async-handler'
 import { errMessages } from '../../../share/messages/errors'
+import { successMessage } from './../../../share/messages/successes'
 
 const postPipe: post = (Domain, validationFn, responseFn) =>
     asyncHandler(async (req, res) => {

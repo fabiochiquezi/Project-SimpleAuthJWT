@@ -27,7 +27,8 @@
         "todo.md": true,
         ".kanbn/tasks": true,
         ".kanbn/how-to-use.txt": true,
-        ".kanbn/index.md": true
+        ".kanbn/index.md": true,
+        ".prettierignore": true
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
