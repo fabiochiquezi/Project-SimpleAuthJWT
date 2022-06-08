@@ -1,0 +1,2 @@
+- Press F1 or Ctrl + Shift + P
+- Select KanBan View

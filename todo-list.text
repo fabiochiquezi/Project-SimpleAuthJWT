@@ -1,5 +1,0 @@
-    - verify how to make a good test in github actions cuz i won't have docker with mongo there
-
-    - clean database after tests / implement function in helpers/test/cleardatabase.ts
-
-    - folder kanban todo backlog

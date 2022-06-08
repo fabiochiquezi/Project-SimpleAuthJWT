@@ -24,7 +24,10 @@
         ".dockerignore": true,
         ".github": true,
         "CHANGELOG.md": true,
-        "todo.md": true
+        "todo.md": true,
+        ".kanbn/tasks": true,
+        ".kanbn/how-to-use.txt": true,
+        ".kanbn/index.md": true
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"

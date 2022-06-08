@@ -1,0 +1,59 @@
+{
+    "title": "SimpleAuthJWT",
+    "cols": [
+        {
+            "title": "BackLog",
+            "tasks": [
+                {
+                    "text": "add step on **README.md** about configuration on mongodb - set up in **.env** var related with the connection required",
+                    "id": "cl45nir0z000a3p5x2suxu7dw"
+                },
+                {
+                    "text": "Think in a better way to structure the folder routes and valid in my Clean Architecture",
+                    "id": "cl45nf5xp000c3p5xgxnoxywq"
+                },
+                {
+                    "text": "Implement the backlog",
+                    "id": "cl45ndmzv000a3p5xj0u706lu"
+                },
+                {
+                    "text": "GitHub Actions - Tests",
+                    "id": "cl45naz4h000g3p5xkbxt7p75"
+                }
+            ],
+            "id": "cl45n99ny000a3p5xm00x9rz5",
+            "color": "#eb144c"
+        },
+        {
+            "title": "To-Do",
+            "tasks": [
+                {
+                    "text": "Clean database after tests",
+                    "id": "cl45n99ny000b3p5xbdi2466e"
+                }
+            ],
+            "id": "cl45n99ny000c3p5xcpm6j95w",
+            "color": "#fcb900"
+        },
+        {
+            "title": "Doing",
+            "tasks": [
+                {
+                    "text": "Implement rest for /simple-todo",
+                    "id": "cl45nerg4000b3p5xxze8wsjd"
+                }
+            ],
+            "id": "cl45n99ny000d3p5x9vknoik1",
+            "color": "#0693e3"
+        },
+        {
+            "title": "Done",
+            "tasks": [],
+            "id": "cl45n99ny000e3p5xnkmzzmjq",
+            "color": "#00d084"
+        }
+    ],
+    "autosave": true,
+    "saveToFile": true,
+    "timestamp": 1654696960816
+}
