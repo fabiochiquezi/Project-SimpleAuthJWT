@@ -28,20 +28,32 @@
             "title": "To-Do",
             "tasks": [
                 {
+                    "text": "refactor all my md based on getOneId.md",
+                    "id": "cl476eqlx000g3p5xpn4yfcqx"
+                },
+                {
+                    "text": "put on the errors test the request to the test function find a 'x' numbers of errors",
+                    "id": "cl476d3jh000f3p5xv8cvr3c9"
+                },
+                {
+                    "text": "Review docs, implement pattern of <br> in the list, to separate logic of test",
+                    "id": "cl472en47000e3p5xg08d4zlv"
+                },
+                {
+                    "text": "add url from tests to helper tests url",
+                    "id": "cl471xcio000c3p5x9km8ey9l"
+                },
+                {
+                    "text": "change folders structure",
+                    "id": "cl471x5e4000b3p5xhwx722md"
+                },
+                {
                     "text": "alter messages of infbase layer, put on the messages file",
                     "id": "cl45wzx6p000c3p5x8ydahzb7"
                 },
                 {
                     "text": "Review all status sent in /simple-todo",
                     "id": "cl45uecew000a3p5x0iqffea8"
-                },
-                {
-                    "text": "Implement rest for /simple-todo",
-                    "id": "cl45nerg4000b3p5xxze8wsjd"
-                },
-                {
-                    "text": "POST /simple-todo -> test fail database",
-                    "id": "cl45psykh000a3p5xbcehax8p"
                 }
             ],
             "id": "cl45n99ny000c3p5xcpm6j95w",
@@ -51,16 +63,20 @@
             "title": "Doing",
             "tasks": [
                 {
-                    "text": "DELETE /simple-todo:id",
+                    "text": "POST /simple-todo\n- test database problem",
+                    "id": "cl471fn88000a3p5xaspxits8"
+                },
+                {
+                    "text": "DELETE /simple-todo:id\n- test database problem",
                     "id": "cl45uewzz000b3p5xbz1t90fl"
                 },
                 {
-                    "text": "GET /simple-todo",
+                    "text": "GET /simple-todo\n- test database problem",
                     "id": "cl45s3uaw000b3p5xivpst32z"
                 },
                 {
-                    "text": "Clean database after tests",
-                    "id": "cl45n99ny000b3p5xbdi2466e"
+                    "text": "GET One /simple-todo:id\n- [ v ] implement docs\n- [    ] implement tests\n- [ v ] implement logic",
+                    "id": "cl4726zkb000d3p5x4yy0v38q"
                 }
             ],
             "id": "cl45n99ny000d3p5x9vknoik1",
@@ -75,5 +91,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654715646206
+    "timestamp": 1654788808026
 }

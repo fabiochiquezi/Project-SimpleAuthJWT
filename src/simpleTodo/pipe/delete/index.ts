@@ -1,7 +1,7 @@
 import { successMessage } from './../../../share/messages/successes'
 import asyncHandler from 'express-async-handler'
-import { errMessages } from '../../../share/messages/errors'
 import { findByIDAndDeleteApi } from '../../infbase/findByIDAndDelete'
+import { errMessages } from '../../../share/messages/errors'
 import { del } from './types'
 
 const deletePipe: del = (Domain, responseFn) =>
