@@ -9,10 +9,6 @@
                     "id": "cl45nir0z000a3p5x2suxu7dw"
                 },
                 {
-                    "text": "Think in a better way to structure the folder routes and valid in my Clean Architecture",
-                    "id": "cl45nf5xp000c3p5xgxnoxywq"
-                },
-                {
                     "text": "Implement the backlog",
                     "id": "cl45ndmzv000a3p5xj0u706lu"
                 },
@@ -28,31 +24,15 @@
             "title": "To-Do",
             "tasks": [
                 {
-                    "text": "refactor all my md based on getOneId.md",
-                    "id": "cl476eqlx000g3p5xpn4yfcqx"
+                    "text": "Test --- database offline",
+                    "id": "cl47g0i0o000a3p5xh43avhrz"
                 },
                 {
-                    "text": "put on the errors test the request to the test function find a 'x' numbers of errors",
+                    "text": "Test --- Put on my error's test the number of errors the function should have",
                     "id": "cl476d3jh000f3p5xv8cvr3c9"
                 },
                 {
-                    "text": "Review docs, implement pattern of <br> in the list, to separate logic of test",
-                    "id": "cl472en47000e3p5xg08d4zlv"
-                },
-                {
-                    "text": "add url from tests to helper tests url",
-                    "id": "cl471xcio000c3p5x9km8ey9l"
-                },
-                {
-                    "text": "change folders structure",
-                    "id": "cl471x5e4000b3p5xhwx722md"
-                },
-                {
-                    "text": "alter messages of infbase layer, put on the messages file",
-                    "id": "cl45wzx6p000c3p5x8ydahzb7"
-                },
-                {
-                    "text": "Review all status sent in /simple-todo",
+                    "text": "App --- Review all status sent in /simple-todo",
                     "id": "cl45uecew000a3p5x0iqffea8"
                 }
             ],
@@ -84,12 +64,29 @@
         },
         {
             "title": "Done",
-            "tasks": [],
+            "tasks": [
+                {
+                    "text": "Improve the structure folder",
+                    "id": "cl471x5e4000b3p5xhwx722md"
+                },
+                {
+                    "text": "Test --- Add URL from tests to helper tests url",
+                    "id": "cl471xcio000c3p5x9km8ey9l"
+                },
+                {
+                    "text": "Docs --- Implement pattern of <br> in the list, to separate logic of test",
+                    "id": "cl472en47000e3p5xg08d4zlv"
+                },
+                {
+                    "text": "Docs --- Refactor all my docs.md based on \"getOneId.md\"",
+                    "id": "cl476eqlx000g3p5xpn4yfcqx"
+                }
+            ],
             "id": "cl45n99ny000e3p5xnkmzzmjq",
             "color": "#00d084"
         }
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654788808026
+    "timestamp": 1654806748768
 }

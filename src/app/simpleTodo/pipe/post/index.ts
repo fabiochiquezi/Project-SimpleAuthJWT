@@ -2,7 +2,6 @@ import { post } from './types'
 import asyncHandler from 'express-async-handler'
 import { errMessages } from '../../../share/messages/errors'
 import { postApi } from '../../../../helpers/crud/mongo/post'
-import { successMessage } from './../../../share/messages/successes'
 
 const postPipe: post = (Domain, validationFn, responseFn) =>
     asyncHandler(async (req, res) => {
@@ -12,13 +11,13 @@ const postPipe: post = (Domain, validationFn, responseFn) =>
             return
         }
 
-        const { post, item } = await postApi(Domain)(req.body)
+        const { post, item, message } = await postApi(Domain)(req.body)
         if (!post) {
-            responseFn(res, 500, false, errMessages.database.err, errors)
+            responseFn(res, 500, false, message, errors)
             return
         }
 
-        responseFn(res, 200, true, successMessage.post, item)
+        responseFn(res, 200, true, message, item)
     })
 
 export { postPipe }

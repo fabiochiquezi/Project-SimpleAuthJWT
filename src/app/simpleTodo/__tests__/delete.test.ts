@@ -1,9 +1,10 @@
-import { errMessages } from '../../share/messages/errors'
+import { testURL } from './../../../helpers/test/vars'
+import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
+import { errDatabaseMessages } from './../../../helpers/crud/mongo/errDatabaseMessages'
 import { reqJest } from '../../../helpers/test/request.ignore'
-import { successMessage } from '../../share/messages/successes'
 
 describe('DELETE /simpleTodo:id', () => {
-    const url = 'http://localhost:5000/api/simple-todo'
+    const url = `${testURL}/simple-todo`
     let toDo: any
 
     beforeAll(async () => {
@@ -20,7 +21,9 @@ describe('DELETE /simpleTodo:id', () => {
 
                 expect(status).toBe(400)
                 expect(data.ok).toBe(false)
-                expect(data.message).toBe(errMessages.database.docNotFound)
+                expect(data.message).toBe(
+                    errDatabaseMessages.notFoundOrDatabaseOff
+                )
             }
         })
 
@@ -35,7 +38,7 @@ describe('DELETE /simpleTodo:id', () => {
 
             expect(resp.status).toBe(200)
             expect(resp.data.ok).toBe(true)
-            expect(resp.data.message).toBe(successMessage.del)
+            expect(resp.data.message).toBe(successDatabaseMessage.del)
         })
     })
 })

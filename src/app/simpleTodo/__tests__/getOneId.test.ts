@@ -1,9 +1,10 @@
-import { errMessages } from './../../share/messages/errors'
+import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
+import { errDatabaseMessages } from './../../../helpers/crud/mongo/errDatabaseMessages'
 import { reqJest } from '../../../helpers/test/request.ignore'
-import { successMessage } from '../../share/messages/successes'
+import { testURL } from '../../../helpers/test/vars'
 
 describe('GET /simple-todo/:id', () => {
-    const url = 'http://localhost:5000/api/simple-todo'
+    const url = `${testURL}/simple-todo`
     let toDo: any
 
     beforeAll(async () => {
@@ -20,7 +21,7 @@ describe('GET /simple-todo/:id', () => {
                 expect(status).toBe(400)
                 expect(data.ok).toBe(false)
                 expect(data.message).toBe(
-                    errMessages.database.notFoundOrDatabaseOff
+                    errDatabaseMessages.notFoundOrDatabaseOff
                 )
             }
         })
@@ -34,7 +35,7 @@ describe('GET /simple-todo/:id', () => {
             const get = await reqJest(`${url}/${docID}`, 'get')
 
             expect(get.data.ok).toBe(true)
-            expect(get.data.message).toBe(successMessage.get)
+            expect(get.data.message).toBe(successDatabaseMessage.getByID)
             expect(get.data.data._id).toBe(docID)
             expect(get.data.data.content).toBe('test')
         })

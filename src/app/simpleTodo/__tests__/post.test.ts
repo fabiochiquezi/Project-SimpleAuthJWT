@@ -1,9 +1,10 @@
-import { errMessages } from './../../share/messages/errors'
+import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
 import { reqJest } from '../../../helpers/test/request.ignore'
-import { successMessage } from '../../share/messages/successes'
+import { errMessages } from './../../share/messages/errors'
+import { testURL } from '../../../helpers/test/vars'
 
 describe('Post /simpleTodo', () => {
-    const url = 'http://localhost:5000/api/simple-todo'
+    const url = `${testURL}/simple-todo`
     let docID: string
 
     describe('given a error or mistake', () => {
@@ -68,7 +69,7 @@ describe('Post /simpleTodo', () => {
 
             expect(resp.status).toBe(200)
             expect(resp.data.ok).toBe(true)
-            expect(resp.data.message).toBe(successMessage.post)
+            expect(resp.data.message).toBe(successDatabaseMessage.post)
             expect(resp.data.data.content).toBe('test')
         })
     })

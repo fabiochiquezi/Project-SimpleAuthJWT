@@ -27,6 +27,7 @@
 #### Should receive:
 <ul>
     <li><div class="color-yellow">content | <b>String</b></div></li>
+    <li><div class="color-yellow">ID | <b>String / param</b></div></li>
 </ul>
 <br />
 

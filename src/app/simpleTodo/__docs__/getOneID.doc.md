@@ -1,4 +1,5 @@
-##Request - <div class="color-yellow inline">Get one by ID</div>
+##Request - <div class="color-yellow inline">GET one by ID</div>
+
 <div class="divider"></div>
 <br>
 <br>
@@ -6,17 +7,16 @@
 #### Logic:
 
 <ol>
-<li>[ ] Should be possible get One ToDo doc by its ID</li>
-<li>[ ] Should give status 200.</li>
-<li>[ ] Should be a public route</li>
+<li>[v] Should be possible get One ToDo doc by its ID</li>
+<li>[v] Should give status 200.</li>
+<li>[v] Should be a public route</li>
 <br>
-<li>[ ] Test if doc exists in the database</li>
 <li>[ ] Test database offline</li>
-<li>[ ] Test success process</li>
+<li>[v] Test if doc exists in the database</li>
+<li>[v] Test success process</li>
 </ol>
 
 <br />
-
 
 #### Route:
 <div class="color-yellow">GET /simple-todo/:id</div>

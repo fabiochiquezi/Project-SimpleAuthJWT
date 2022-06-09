@@ -1,7 +1,8 @@
 import { reqJest } from '../../../helpers/test/request.ignore'
+import { testURL } from '../../../helpers/test/vars'
 
 describe('PUT /simpleTodo:id', () => {
-    const url = 'http://localhost:5000/api/simple-todo'
+    const url = `${testURL}/simple-todo`
     let toDo: any
 
     beforeAll(async () => {
