@@ -9,6 +9,7 @@ describe('Post /simpleTodo', () => {
 
     describe('given a error or mistake', () => {
         it('as miss required data¹', async () => {
+            expect.assertions(3)
             try {
                 const data = {}
                 await reqJest(url, 'post', data)
@@ -22,6 +23,7 @@ describe('Post /simpleTodo', () => {
         })
 
         it('as miss required data²', async () => {
+            expect.assertions(3)
             try {
                 const data = { name: 'test', conten: 'test' }
                 await reqJest(url, 'post', data)
@@ -35,6 +37,7 @@ describe('Post /simpleTodo', () => {
         })
 
         it('as miss required data³', async () => {
+            expect.assertions(3)
             try {
                 const data = { content: '' }
                 await reqJest(url, 'post', data)
@@ -48,6 +51,7 @@ describe('Post /simpleTodo', () => {
         })
 
         it('as wrong type date', async () => {
+            expect.assertions(3)
             try {
                 const data = { content: 222 }
                 await reqJest(url, 'post', data)
@@ -67,7 +71,7 @@ describe('Post /simpleTodo', () => {
             const resp = await reqJest(url, 'post', data)
             docID = resp.data.data._id
 
-            expect(resp.status).toBe(200)
+            expect(resp.status).toBe(201)
             expect(resp.data.ok).toBe(true)
             expect(resp.data.message).toBe(successDatabaseMessage.post)
             expect(resp.data.data.content).toBe('test')

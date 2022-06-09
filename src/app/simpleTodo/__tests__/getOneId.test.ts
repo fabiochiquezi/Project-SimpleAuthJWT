@@ -14,6 +14,7 @@ describe('GET /simple-todo/:id', () => {
 
     describe('given a error or mistake', () => {
         it('as if doc did not exist', async () => {
+            expect.assertions(3)
             try {
                 await reqJest(`${url}/000`, 'get')
             } catch (e: any) {

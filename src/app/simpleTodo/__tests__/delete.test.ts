@@ -14,6 +14,7 @@ describe('DELETE /simpleTodo:id', () => {
 
     describe('given a error or mistake', () => {
         it('as miss data on the database', async () => {
+            expect.assertions(3)
             try {
                 await reqJest(`${url}/000`, 'delete')
             } catch (e: any) {

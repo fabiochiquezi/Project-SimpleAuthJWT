@@ -17,7 +17,7 @@ const postPipe: post = (Domain, validationFn, responseFn) =>
             return
         }
 
-        responseFn(res, 200, true, message, item)
+        responseFn(res, 201, true, message, item)
     })
 
 export { postPipe }

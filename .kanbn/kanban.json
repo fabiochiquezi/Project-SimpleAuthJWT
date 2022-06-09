@@ -5,15 +5,15 @@
             "title": "BackLog",
             "tasks": [
                 {
-                    "text": "add step on **README.md** about configuration on mongodb - set up in **.env** var related with the connection required",
+                    "text": "Config --- README - Remake all readme",
                     "id": "cl45nir0z000a3p5x2suxu7dw"
                 },
                 {
-                    "text": "Implement the backlog",
+                    "text": "Config --- Implement the backlog",
                     "id": "cl45ndmzv000a3p5xj0u706lu"
                 },
                 {
-                    "text": "GitHub Actions - Tests",
+                    "text": "CI/CD --- GitHub Actions - Tests",
                     "id": "cl45naz4h000g3p5xkbxt7p75"
                 }
             ],
@@ -26,14 +26,6 @@
                 {
                     "text": "Test --- database offline",
                     "id": "cl47g0i0o000a3p5xh43avhrz"
-                },
-                {
-                    "text": "Test --- Put on my error's test the number of errors the function should have",
-                    "id": "cl476d3jh000f3p5xv8cvr3c9"
-                },
-                {
-                    "text": "App --- Review all status sent in /simple-todo",
-                    "id": "cl45uecew000a3p5x0iqffea8"
                 }
             ],
             "id": "cl45n99ny000c3p5xcpm6j95w",
@@ -80,6 +72,14 @@
                 {
                     "text": "Docs --- Refactor all my docs.md based on \"getOneId.md\"",
                     "id": "cl476eqlx000g3p5xpn4yfcqx"
+                },
+                {
+                    "text": "App --- Review all status sent in /simple-todo",
+                    "id": "cl45uecew000a3p5x0iqffea8"
+                },
+                {
+                    "text": "Test --- Put on my error's test the number of errors the function should have",
+                    "id": "cl476d3jh000f3p5xv8cvr3c9"
                 }
             ],
             "id": "cl45n99ny000e3p5xnkmzzmjq",
@@ -88,5 +88,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654806748768
+    "timestamp": 1654807635837
 }
