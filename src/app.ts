@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv'
-import makeApp from './share/configs/app'
-import pathEnv from './share/configs/app/pathEnv'
-import { connectMongo } from './share/configs/database/mongo'
+import makeApp from './app/index'
+import pathEnv from './configs/pathEnv'
+import { connectMongo } from './configs/database/mongo'
 
 dotenv.config({ path: pathEnv() })
 connectMongo()

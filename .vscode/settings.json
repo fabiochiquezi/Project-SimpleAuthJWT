@@ -28,7 +28,13 @@
         ".kanbn/tasks": true,
         ".kanbn/how-to-use.txt": true,
         ".kanbn/index.md": true,
-        ".prettierignore": true
+        ".prettierignore": true,
+
+        //SRC
+        "src/app.ts": true,
+        "src/configs/": true,
+        "package.json": true
+
     },
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
