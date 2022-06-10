@@ -22,18 +22,17 @@
         },
         {
             "title": "To-Do",
-            "tasks": [
-                {
-                    "text": "Test --- database offline",
-                    "id": "cl47g0i0o000a3p5xh43avhrz"
-                }
-            ],
+            "tasks": [],
             "id": "cl45n99ny000c3p5xcpm6j95w",
             "color": "#fcb900"
         },
         {
             "title": "Doing",
             "tasks": [
+                {
+                    "text": "PUT /simple-todo:id\n- [    ] implement docs\n- [    ] implement tests\n- [    ] implement logic",
+                    "id": "cl47hrpvo000a3p5x18exjy6z"
+                },
                 {
                     "text": "POST /simple-todo\n- test database problem",
                     "id": "cl471fn88000a3p5xaspxits8"
@@ -88,5 +87,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654807635837
+    "timestamp": 1654807723443
 }

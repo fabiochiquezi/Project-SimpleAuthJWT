@@ -1,7 +1,7 @@
-import { testURL } from './../../../helpers/test/vars'
 import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
 import { errDatabaseMessages } from './../../../helpers/crud/mongo/errDatabaseMessages'
 import { reqJest } from '../../../helpers/test/request.ignore'
+import { testURL } from './../../../helpers/test/vars'
 
 describe('DELETE /simpleTodo:id', () => {
     const url = `${testURL}/simple-todo`
