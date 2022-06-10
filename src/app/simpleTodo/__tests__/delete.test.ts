@@ -1,7 +1,8 @@
-import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
-import { errDatabaseMessages } from './../../../helpers/crud/mongo/errDatabaseMessages'
-import { reqJest } from '../../../helpers/test/request.ignore'
-import { testURL } from './../../../helpers/test/vars'
+import { reqJest, testURL } from '../../../helpers/test'
+import {
+    successDatabaseMessages,
+    errDatabaseMessages
+} from './../../../helpers'
 
 describe('DELETE /simpleTodo:id', () => {
     const url = `${testURL}/simple-todo`
@@ -39,7 +40,7 @@ describe('DELETE /simpleTodo:id', () => {
 
             expect(resp.status).toBe(200)
             expect(resp.data.ok).toBe(true)
-            expect(resp.data.message).toBe(successDatabaseMessage.del)
+            expect(resp.data.message).toBe(successDatabaseMessages.del)
         })
     })
 })

@@ -22,7 +22,20 @@
         },
         {
             "title": "To-Do",
-            "tasks": [],
+            "tasks": [
+                {
+                    "text": "Make tests with database off, handle errors w/ database off",
+                    "id": "cl48x6b4z000a3p5xbehjqya8"
+                },
+                {
+                    "text": "test other functions",
+                    "id": "cl48we6qu000c3p5x26uy931i"
+                },
+                {
+                    "text": "change the name of the vars databaseMessages, simplify it",
+                    "id": "cl48vg0o3000b3p5x2t5rs7pd"
+                }
+            ],
             "id": "cl45n99ny000c3p5xcpm6j95w",
             "color": "#fcb900"
         },
@@ -87,5 +100,5 @@
     ],
     "autosave": true,
     "saveToFile": true,
-    "timestamp": 1654807723443
+    "timestamp": 1654894060547
 }

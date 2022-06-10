@@ -1,5 +1,5 @@
 import { errDatabaseMessages } from './../errDatabaseMessages'
-import { successDatabaseMessage } from './../successDatabaseMessages'
+import { successDatabaseMessages } from './../successDatabaseMessages'
 import { props } from './types'
 
 export const findByIDAndDeleteApi: props = Domain => async id => {
@@ -7,7 +7,7 @@ export const findByIDAndDeleteApi: props = Domain => async id => {
         await Domain.findByIdAndDelete(id)
         return {
             del: true,
-            message: successDatabaseMessage.del
+            message: successDatabaseMessages.del
         }
     } catch (e: any) {
         return {

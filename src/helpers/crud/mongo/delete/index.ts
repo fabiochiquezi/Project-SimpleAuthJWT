@@ -1,5 +1,5 @@
 import { errDatabaseMessages } from './../errDatabaseMessages'
-import { successDatabaseMessage } from './../successDatabaseMessages'
+import { successDatabaseMessages } from './../successDatabaseMessages'
 import { props } from './types'
 
 export const deleteApi: props = Domain => async id => {
@@ -7,7 +7,7 @@ export const deleteApi: props = Domain => async id => {
         await Domain.deleteOne({ id })
         return {
             delete: true,
-            message: successDatabaseMessage.del
+            message: successDatabaseMessages.del
         }
     } catch (e: any) {
         return { delete: false, message: errDatabaseMessages.err }

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { domain } from './types'
+import { domain } from '../archTypes'
 
 const fields = {
     content: {

@@ -1,8 +1,9 @@
-import { getApi } from '../../../../helpers/crud/mongo/get'
+import { getApi, responseStd } from '../../../helpers'
 import asyncHandler from 'express-async-handler'
-import { get } from './types'
+import { SimpleTodoDomain } from '../domain'
+import { get } from '../archTypes'
 
-const getPipe: get = (Domain, responseFn) =>
+const getFn: get = (Domain, responseFn) =>
     asyncHandler(async (_req, res) => {
         const { get, docs, message } = await getApi(Domain)
         if (!get) {
@@ -13,4 +14,4 @@ const getPipe: get = (Domain, responseFn) =>
         responseFn(res, 200, true, message, docs)
     })
 
-export { getPipe }
+export const getPipe = getFn(SimpleTodoDomain, responseStd)

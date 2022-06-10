@@ -1,5 +1,5 @@
 import { errDatabaseMessages } from './../errDatabaseMessages'
-import { successDatabaseMessage } from './../successDatabaseMessages'
+import { successDatabaseMessages } from './../successDatabaseMessages'
 import { props } from './types'
 
 export const findByIDApi: props = Domain => async id => {
@@ -7,7 +7,7 @@ export const findByIDApi: props = Domain => async id => {
         const toDo = await Domain.findById(id)
         return {
             findByID: true,
-            message: successDatabaseMessage.getByID,
+            message: successDatabaseMessages.getByID,
             doc: toDo
         }
     } catch (e: any) {

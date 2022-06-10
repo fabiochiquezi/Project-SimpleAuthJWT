@@ -1,9 +1,10 @@
-import { post } from './types'
+import { post } from '../archTypes'
+import { errMessages } from '../../share'
+import { SimpleTodoDomain } from '../domain'
 import asyncHandler from 'express-async-handler'
-import { errMessages } from '../../../share/messages/errors'
-import { postApi } from '../../../../helpers/crud/mongo/post'
+import { postApi, responseStd, validReq } from '../../../helpers'
 
-const postPipe: post = (Domain, validationFn, responseFn) =>
+const postFn: post = (Domain, validationFn, responseFn) =>
     asyncHandler(async (req, res) => {
         const { valid, errors } = validationFn(req)
         if (!valid) {
@@ -20,4 +21,4 @@ const postPipe: post = (Domain, validationFn, responseFn) =>
         responseFn(res, 201, true, message, item)
     })
 
-export { postPipe }
+export const postPipe = postFn(SimpleTodoDomain, validReq, responseStd)

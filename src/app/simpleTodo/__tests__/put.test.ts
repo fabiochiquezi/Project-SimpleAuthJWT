@@ -1,5 +1,4 @@
-import { reqJest } from '../../../helpers/test/request.ignore'
-import { testURL } from '../../../helpers/test/vars'
+import { reqJest, testURL } from '../../../helpers/test'
 
 describe('PUT /simpleTodo:id', () => {
     const url = `${testURL}/simple-todo`

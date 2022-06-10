@@ -1,8 +1,9 @@
-import { findByIDAndDeleteApi } from '../../../../helpers/crud/mongo/findByIDAndDelete'
+import { findByIDAndDeleteApi, responseStd } from '../../../helpers'
 import asyncHandler from 'express-async-handler'
-import { del } from './types'
+import { SimpleTodoDomain } from '../domain'
+import { del } from '../archTypes'
 
-const deletePipe: del = (Domain, responseFn) =>
+const delFn: del = (Domain, responseFn) =>
     asyncHandler(async (req, res) => {
         const reqID = req.params.id
         const findDeleteFn = findByIDAndDeleteApi(Domain)
@@ -15,4 +16,4 @@ const deletePipe: del = (Domain, responseFn) =>
         responseFn(res, 200, true, message)
     })
 
-export { deletePipe }
+export const deletePipe = delFn(SimpleTodoDomain, responseStd)

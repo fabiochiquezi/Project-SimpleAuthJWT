@@ -1,6 +1,5 @@
-import { successDatabaseMessage } from './../../../helpers/crud/mongo/successDatabaseMessages'
-import { reqJest } from '../../../helpers/test/request.ignore'
-import { testURL } from '../../../helpers/test/vars'
+import { reqJest, testURL } from '../../../helpers/test'
+import { successDatabaseMessages } from './../../../helpers'
 
 describe('GET /simpleTodo', () => {
     const url = `${testURL}/simple-todo`
@@ -24,7 +23,7 @@ describe('GET /simpleTodo', () => {
             const get = await reqJest(url, 'get')
 
             expect(get.data.ok).toBe(true)
-            expect(get.data.message).toBe(successDatabaseMessage.get)
+            expect(get.data.message).toBe(successDatabaseMessages.get)
             expect(get.data.data[0].content).toBe('test 1')
             expect(get.data.data[1].content).toBe('test 2')
         })

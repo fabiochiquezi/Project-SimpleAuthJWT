@@ -1,0 +1,5 @@
+export { getOneByIDPipe } from './getOneByID'
+export { deletePipe } from './del'
+export { getPipe } from './get'
+export { postPipe } from './post'
+export { putPipe } from './put'

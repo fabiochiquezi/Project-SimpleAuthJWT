@@ -1,4 +1,4 @@
-export const successDatabaseMessage = {
+export const successDatabaseMessages = {
     post: 'Document successfully inserted.',
     get: 'Documents successfully obtained.',
     getByID: 'Document successfully obtained.',

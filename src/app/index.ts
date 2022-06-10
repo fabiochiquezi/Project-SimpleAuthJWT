@@ -1,6 +1,6 @@
+import { errrorHandler } from './share'
 import express, { Application } from 'express'
 import { simpleTodoRouter } from './simpleTodo/routes'
-import { errrorHandler } from './share/middlewares/errorMiddleware'
 
 const makeApp = () => {
     const app: Application = express()

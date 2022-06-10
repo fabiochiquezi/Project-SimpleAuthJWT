@@ -1,8 +1,9 @@
-import { findByIDApi } from '../../../../helpers/crud/mongo/findByID/index'
+import { findByIDApi, responseStd } from '../../../helpers'
 import asyncHandler from 'express-async-handler'
-import { getOneByID } from './types'
+import { SimpleTodoDomain } from '../domain'
+import { getOneByID } from '../archTypes'
 
-const getOneByIDPipe: getOneByID = (Domain, responseFn) =>
+const getOneByIDFn: getOneByID = (Domain, responseFn) =>
     asyncHandler(async (req, res) => {
         const reqID = req.params.id
         const findFn = findByIDApi(Domain)
@@ -15,4 +16,4 @@ const getOneByIDPipe: getOneByID = (Domain, responseFn) =>
         responseFn(res, 200, true, message, doc)
     })
 
-export { getOneByIDPipe }
+export const getOneByIDPipe = getOneByIDFn(SimpleTodoDomain, responseStd)
