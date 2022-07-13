@@ -1,5 +1,5 @@
 import { reqJest, testURL } from '../../../helpers/test'
-import { successDatabaseMessages } from './../../../helpers'
+import { scssDBMsgs } from './../../../helpers'
 
 describe('GET /simpleTodo', () => {
     const url = `${testURL}/simple-todo`
@@ -23,7 +23,7 @@ describe('GET /simpleTodo', () => {
             const get = await reqJest(url, 'get')
 
             expect(get.data.ok).toBe(true)
-            expect(get.data.message).toBe(successDatabaseMessages.get)
+            expect(get.data.message).toBe(scssDBMsgs.get)
             expect(get.data.data[0].content).toBe('test 1')
             expect(get.data.data[1].content).toBe('test 2')
         })

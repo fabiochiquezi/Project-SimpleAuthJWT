@@ -1,8 +1,5 @@
 import { reqJest, testURL } from '../../../helpers/test'
-import {
-    successDatabaseMessages,
-    errDatabaseMessages
-} from './../../../helpers'
+import { scssDBMsgs, errDBMsgs } from './../../../helpers'
 
 describe('GET /simple-todo/:id', () => {
     const url = `${testURL}/simple-todo`
@@ -22,9 +19,7 @@ describe('GET /simple-todo/:id', () => {
                 const { data, status } = e.response
                 expect(status).toBe(400)
                 expect(data.ok).toBe(false)
-                expect(data.message).toBe(
-                    errDatabaseMessages.notFoundOrDatabaseOff
-                )
+                expect(data.message).toBe(errDBMsgs.notFoundOrDatabaseOff)
             }
         })
 
@@ -37,7 +32,7 @@ describe('GET /simple-todo/:id', () => {
             const get = await reqJest(`${url}/${docID}`, 'get')
 
             expect(get.data.ok).toBe(true)
-            expect(get.data.message).toBe(successDatabaseMessages.getByID)
+            expect(get.data.message).toBe(scssDBMsgs.getByID)
             expect(get.data.data._id).toBe(docID)
             expect(get.data.data.content).toBe('test')
         })

@@ -1,15 +1,15 @@
-import { errDatabaseMessages } from './../errDatabaseMessages'
-import { successDatabaseMessages } from './../successDatabaseMessages'
+import { errDBMsgs } from './../errDBMsgs'
+import { scssDBMsgs } from './../scssDBMsgs'
 import { props } from './types'
 
 export const updateOneApi: props = doc => async data => {
     try {
         doc.updateOne({ content: data.content })
-        return { update: true, message: successDatabaseMessages.put }
+        return { update: true, message: scssDBMsgs.put }
     } catch (e: any) {
         return {
             update: false,
-            message: errDatabaseMessages.notFoundOrDatabaseOff
+            message: errDBMsgs.notFoundOrDatabaseOff
         }
     }
 }

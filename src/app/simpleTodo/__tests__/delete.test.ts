@@ -1,8 +1,5 @@
 import { reqJest, testURL } from '../../../helpers/test'
-import {
-    successDatabaseMessages,
-    errDatabaseMessages
-} from './../../../helpers'
+import { scssDBMsgs, errDBMsgs } from './../../../helpers'
 
 describe('DELETE /simpleTodo:id', () => {
     const url = `${testURL}/simple-todo`
@@ -23,9 +20,7 @@ describe('DELETE /simpleTodo:id', () => {
 
                 expect(status).toBe(400)
                 expect(data.ok).toBe(false)
-                expect(data.message).toBe(
-                    errDatabaseMessages.notFoundOrDatabaseOff
-                )
+                expect(data.message).toBe(errDBMsgs.notFoundOrDatabaseOff)
             }
         })
 
@@ -40,7 +35,7 @@ describe('DELETE /simpleTodo:id', () => {
 
             expect(resp.status).toBe(200)
             expect(resp.data.ok).toBe(true)
-            expect(resp.data.message).toBe(successDatabaseMessages.del)
+            expect(resp.data.message).toBe(scssDBMsgs.del)
         })
     })
 })
